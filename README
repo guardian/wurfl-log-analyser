@@ -1,0 +1,32 @@
+
+Usage
+-----
+
+``` 
+# grep your access log 
+grep iPhone logs/guardian-access_log.20120622.guweb01 > logs/guardian-access_log.20120622.guweb0.iphone
+
+# process it 
+ruby filter.rb < logs/guardian-access_log.20120622.guweb0.iphone > iphones
+
+# run a simple report
+cut -f 1,2,3,5,6,7 iphones | uniq | sort | cut -f 2,5,6 | sort | uniq -c
+```
+
+Generates a table:-
+
+    1   302     2.3     Android
+    1   302     4.1     RIM OS
+    3   302     4.2     RIM OS
+    1   302     4.2.2   RIM OS
+    10  302     4.3     RIM OS
+    3   302     4.5     RIM OS
+    36  302     4.6     RIM OS
+    86  302     4.6.1   RIM OS
+    1   302     4.7     RIM OS
+    4   302     4.7.1   RIM OS
+    645 302     5.0     RIM OS
+    994 302     6.0     RIM OS
+    557 302     7.0     RIM OS
+    100 302     UNKNOWN UNKNOWN
+
