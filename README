@@ -1,3 +1,14 @@
+Analysis of guardian.co.uk apache logs for mobile device operating system name and versions.
+
+Install
+-------
+
+Download the http://wurfl.sourceforge.net/ database (Eg, wurfl-2.3.1.xml.gz) to ./wurfl/
+
+```
+bundle
+rspec
+```
 
 Usage
 -----
