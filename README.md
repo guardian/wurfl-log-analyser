@@ -17,6 +17,7 @@ Grep your access log (or you could process the whole thing) :-
 
 ``` 
 grep iPhone logs/guardian-access_log.20120622.guweb01 > logs/guardian-access_log.20120622.guweb0.iphone
+```
 
 Process it :-
 
@@ -30,9 +31,8 @@ Run a simple report :-
 cut -f 1,2,3,5,6,7 iphones | uniq | sort | cut -f 2,5,6 | sort | uniq -c
 ```
 
-Which should generate a table :-
+Which should generate a table with _count, status code, os version, os_ as column headings :- 
 
-    1   302     2.3     Android
     1   302     4.1     RIM OS
     3   302     4.2     RIM OS
     1   302     4.2.2   RIM OS
