@@ -13,18 +13,24 @@ rspec
 Usage
 -----
 
+Grep your access log (or you could process the whole thing) :-
+
 ``` 
-# grep your access log 
 grep iPhone logs/guardian-access_log.20120622.guweb01 > logs/guardian-access_log.20120622.guweb0.iphone
 
-# process it 
-ruby filter.rb < logs/guardian-access_log.20120622.guweb0.iphone > iphones
+Process it :-
 
-# run a simple report
+```
+ruby filter.rb < logs/guardian-access_log.20120622.guweb0.iphone > iphones
+```
+
+Run a simple report :-
+
+```
 cut -f 1,2,3,5,6,7 iphones | uniq | sort | cut -f 2,5,6 | sort | uniq -c
 ```
 
-Generates a table:-
+Which should generate a table :-
 
     1   302     2.3     Android
     1   302     4.1     RIM OS
