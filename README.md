@@ -8,7 +8,7 @@ Download the http://wurfl.sourceforge.net/ database (Eg, wurfl-2.3.1.xml.gz) to 
 ```
 bundle
 rspec -f d spec
-``
+```
 
 Should generate :-
 
