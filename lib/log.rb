@@ -6,7 +6,7 @@ class Log
 
     def parse(entry)
         tokens = entry.split('"')
-        
+
         @ip         = tokens[0].split(' ').first
         @method     = tokens[1].split(' ').first
         @resource   = tokens[1].split(' ')[1]
